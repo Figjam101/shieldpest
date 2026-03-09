@@ -81,11 +81,16 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/[0.08] py-6 flex flex-wrap justify-between gap-3">
-          <span className="font-body text-xs text-white/30">
+        <div className="border-t border-white/[0.08] py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <span className="font-body text-xs text-white/30 order-2 md:order-1 flex-1">
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </span>
-          <div className="flex gap-6">
+
+          <span className="font-body text-xs text-white/40 order-1 md:order-2 flex-1 md:text-center">
+            Website built by <a href="#" target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:text-amber-400 transition-colors font-medium">Belgravia Solutions</a>
+          </span>
+
+          <div className="flex gap-6 order-3 flex-1 md:justify-end justify-center">
             {['Privacy Policy', 'Terms of Service', 'Sitemap'].map((link) => (
               <Link
                 key={link}
