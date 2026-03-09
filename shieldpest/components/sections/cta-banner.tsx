@@ -9,11 +9,11 @@ export function CTABanner() {
   return (
     <section className="bg-gradient-to-br from-amber-600 via-amber-500 to-amber-400 section-padding relative overflow-hidden">
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none mix-blend-multiply"
         style={{
           background: `
-            radial-gradient(circle at 90% 10%, rgba(255,255,255,0.08) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(15,31,26,0.6) 130%)
+            radial-gradient(circle at 50% 50%, rgba(15,31,26,0.3) 0%, rgba(15,31,26,0.8) 100%),
+            radial-gradient(circle at 90% 10%, rgba(255,255,255,0.08) 0%, transparent 50%)
           `,
         }}
       />
