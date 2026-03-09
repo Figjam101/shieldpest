@@ -118,7 +118,7 @@ export const services: Service[] = [
     metaDescription: 'Comprehensive pest and termite inspections with detailed, lender-ready reports. Thermal imaging included. Book online.',
     heroLead: 'Don\'t buy a home with hidden pest damage. Our detailed inspections use thermal imaging and moisture detection to reveal what\'s invisible to the eye.',
     icon: 'inspection',
-    image: '/images/services/inspection_service.webp',
+    image: '/images/services/inspection_service.png',
     cardDescription: 'Comprehensive pest and termite inspections with detailed, lender-ready reports.',
   },
 ];
