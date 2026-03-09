@@ -7,19 +7,19 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    text: "Found termites in our subfloor on a Friday afternoon. ShieldPest had a technician out within 3 hours. Professional, thorough, and genuinely reassuring during a stressful moment.",
+    text: "Found termites in our subfloor on a Friday afternoon. Mr Solutions had a technician out within 3 hours. Professional, thorough, and genuinely reassuring during a stressful moment.",
     name: "Sarah M.",
-    location: "Parramatta",
+    location: "Seaford",
     rating: 5,
   },
   {
-    text: "We've used ShieldPest for annual inspections for three years now. Their reports are detailed, their team is punctual, and they actually explain what they find instead of just upselling.",
+    text: "We've used Mr Solutions for annual inspections for three years now. Their reports are detailed, their team is punctual, and they actually explain what they find instead of just upselling.",
     name: "David R.",
     location: "Castle Hill",
     rating: 5,
   },
   {
-    text: "After trying two other companies for a persistent cockroach problem, ShieldPest finally solved it. The difference was their approach — they found the source, not just the symptoms.",
+    text: "After trying two other companies for a persistent cockroach problem, Mr Solutions finally solved it. The difference was their approach — they found the source, not just the symptoms.",
     name: "Priya K.",
     location: "Blacktown",
     rating: 5,
@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    text: "We manage 12 rental properties and ShieldPest handles all our pest control. Reliable scheduling, clean reports for landlords, and never a complaint from tenants.",
+    text: "We manage 12 rental properties and Mr Solutions handles all our pest control. Reliable scheduling, clean reports for landlords, and never a complaint from tenants.",
     name: "Jenny L.",
     location: "Liverpool",
     rating: 5,

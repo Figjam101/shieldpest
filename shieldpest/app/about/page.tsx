@@ -5,7 +5,7 @@ import { TestimonialsSection } from '@/components/sections/testimonials-section'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Meet the ShieldPest team. Licensed, experienced pest control professionals serving greater Sydney with integrity and expertise.',
+  description: 'Meet the Mr Solutions team. Licensed, experienced pest control professionals serving southern Adelaide with integrity and expertise.',
 };
 
 const stats = [
@@ -21,10 +21,10 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-forest-900 via-forest-800 to-forest-700 pt-32 pb-20">
         <div className="container-site max-w-[800px]">
           <h1 className="font-display font-extrabold text-h1 text-white mb-6">
-            Protecting Sydney Homes Since 2015
+            Protecting Adelaide Homes Since 2015
           </h1>
           <p className="font-body text-lg leading-relaxed text-white/70">
-            ShieldPest was founded on a simple belief: every family deserves to live in a home
+            Mr Solutions was founded on a simple belief: every family deserves to live in a home
             free from pests — and they deserve honest, professional service to get there.
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <h2 className="font-display font-bold text-h2 text-forest-900 mb-6">Our Story</h2>
           <div className="font-body text-base leading-[1.8] text-gray-600 space-y-6">
             <p>
-              We started ShieldPest after years of watching the pest control industry over-promise
+              We started Mr Solutions after years of watching the pest control industry over-promise
               and under-deliver. Too many companies rely on generic spray-and-pray tactics, leaving
               homeowners frustrated and still dealing with pests weeks later.
             </p>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </p>
             <p>
               Today, our team of over 15 licensed technicians serves thousands of homes across
-              greater Sydney. We&apos;re proud of our 4.9-star rating, but what we&apos;re most
+              southern Adelaide. We&apos;re proud of our 4.9-star rating, but what we&apos;re most
               proud of is the trust our customers place in us to protect their homes and families.
             </p>
           </div>

@@ -50,7 +50,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="font-body text-sm leading-relaxed text-white/50 mb-5 max-w-[260px]">
-              Professional pest control services across greater Sydney.
+              Professional pest control services across southern Adelaide.
               Licensed, insured, and committed to protecting your home.
             </p>
             <div className="font-body text-xs text-white/40 space-y-1">

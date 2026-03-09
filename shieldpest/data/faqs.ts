@@ -26,7 +26,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "What areas do you service?",
-    answer: "We cover greater Sydney including Western Sydney, Northern Beaches, Eastern Suburbs, Inner West, Sutherland Shire, Hills District, and the Central Coast. Check our service areas page for your specific suburb.",
+    answer: "We cover Seaford and southern Adelaide, including the Fleurieu Peninsula, Onkaparinga, and Marion council areas. Check our service areas page for your specific suburb.",
   },
   {
     question: "Are you licensed and insured?",

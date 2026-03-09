@@ -1,24 +1,24 @@
 export const siteConfig = {
-  name: 'ShieldPest',
+  name: 'Mr Solutions',
   tagline: 'Your Home\'s First Line of Defence Against Pests',
-  description: 'Professional pest control services across greater Sydney. Same-day service, licensed technicians, transparent pricing, guaranteed results.',
-  url: 'https://www.shieldpest.com.au',
+  description: 'Professional pest control services across southern Adelaide. Same-day service, licensed technicians, transparent pricing, guaranteed results.',
+  url: 'https://www.mrsolutions.com.au',
   phone: '(02) XXXX XXXX',
   phoneTel: '+610200000000',
-  email: 'info@shieldpest.com.au',
+  email: 'info@mrsolutions.com.au',
   address: {
     street: '123 Example Street',
-    suburb: 'Parramatta',
-    state: 'NSW',
-    postcode: '2150',
+    suburb: 'Seaford',
+    state: 'SA',
+    postcode: '5169',
     country: 'AU',
   },
   licence: 'XXXXXXX',
   abn: 'XX XXX XXX XXX',
   social: {
-    facebook: 'https://facebook.com/shieldpest',
-    instagram: 'https://instagram.com/shieldpest',
-    google: 'https://g.page/shieldpest',
+    facebook: 'https://facebook.com/mrsolutions',
+    instagram: 'https://instagram.com/mrsolutions',
+    google: 'https://g.page/mrsolutions',
   },
   openingHours: {
     weekdays: '7:00 AM – 6:00 PM',
@@ -28,8 +28,8 @@ export const siteConfig = {
 } as const;
 
 export const seoDefaults = {
-  titleTemplate: '%s | ShieldPest Sydney',
-  defaultTitle: 'ShieldPest — Professional Pest Control Sydney | Licensed & Insured',
+  titleTemplate: '%s | Mr Solutions Adelaide',
+  defaultTitle: 'Mr Solutions — Professional Pest Control Adelaide | Licensed & Insured',
   description: siteConfig.description,
   openGraph: {
     type: 'website',

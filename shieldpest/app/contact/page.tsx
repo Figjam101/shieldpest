@@ -5,7 +5,7 @@ import { CTABanner } from '@/components/sections/cta-banner';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with ShieldPest for a free pest control quote. Same-day service available across greater Sydney.',
+  description: 'Get in touch with Mr Solutions for a free pest control quote. Same-day service available across southern Adelaide.',
 };
 
 export default function ContactPage() {
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-base text-forest-900 mb-1">Service Area</h3>
-                  <p className="font-body text-gray-600">Greater Sydney, NSW</p>
+                  <p className="font-body text-gray-600">Greater Adelaide, SA</p>
                 </div>
               </div>
 
@@ -133,7 +133,7 @@ export default function ContactPage() {
                       name="suburb"
                       className="w-full px-4 py-3 rounded-lg border border-surface-200 bg-white font-body text-sm
                                  focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition"
-                      placeholder="e.g. Parramatta"
+                      placeholder="e.g. Seaford"
                     />
                   </div>
                   <div>

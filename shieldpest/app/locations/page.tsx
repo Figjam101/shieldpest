@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
   title: 'Service Areas',
-  description: 'ShieldPest serves greater Sydney — Western Sydney, Hills District, Northern Beaches, Inner West, and more. Find pest control near you.',
+  description: 'Mr Solutions serves southern Adelaide — Seaford, Moana, Aldinga Beach, Victor Harbor, and surrounding suburbs. Find pest control near you.',
 };
 
 export default function LocationsPage() {
@@ -21,7 +21,7 @@ export default function LocationsPage() {
             Service Areas
           </h1>
           <p className="font-body text-lg text-white/70 max-w-[500px]">
-            Professional pest control across greater Sydney. Find your suburb below.
+            Professional pest control across southern Adelaide. Find your suburb below.
           </p>
         </div>
       </section>

@@ -99,7 +99,7 @@ export function ServiceSchema({
     },
     areaServed: {
       '@type': 'City',
-      name: 'Sydney',
+      name: 'Adelaide',
     },
     description,
     offers: {

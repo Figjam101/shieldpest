@@ -4,7 +4,7 @@ import { CTABanner } from '@/components/sections/cta-banner';
 
 export const metadata: Metadata = {
   title: 'Customer Reviews',
-  description: 'Read reviews from ShieldPest customers across Sydney. 4.9-star average from 500+ verified reviews.',
+  description: 'Read reviews from Mr Solutions customers across southern Adelaide. 4.9-star average from 500+ verified reviews.',
 };
 
 export default function ReviewsPage() {

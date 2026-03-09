@@ -3,13 +3,13 @@ import { CTABanner } from '@/components/sections/cta-banner';
 
 export const metadata: Metadata = {
   title: 'Blog — Pest Control Tips & Advice',
-  description: 'Expert advice from ShieldPest technicians. Pest prevention tips, seasonal guides, and honest answers to common pest control questions.',
+  description: 'Expert advice from Mr Solutions technicians. Pest prevention tips, seasonal guides, and honest answers to common pest control questions.',
 };
 
 const blogPosts = [
   { slug: '5-signs-you-have-termites', title: '5 Signs You Have Termites (And What to Do Next)', excerpt: 'Termites are often called the "silent destroyers" for good reason. Here are the warning signs every homeowner should know.', date: '2025-03-15', category: 'Termites' },
-  { slug: 'how-much-does-pest-control-cost', title: 'How Much Does Pest Control Cost in Sydney? 2025 Guide', excerpt: 'A transparent breakdown of what you can expect to pay for different pest control services in the Sydney area.', date: '2025-03-01', category: 'Guides' },
-  { slug: 'cockroach-prevention-mistakes', title: 'Cockroach Prevention: 8 Things Sydney Homeowners Get Wrong', excerpt: 'Think keeping a clean kitchen is enough? Here are the common mistakes that keep cockroaches coming back.', date: '2025-02-15', category: 'Prevention' },
+  { slug: 'how-much-does-pest-control-cost', title: 'How Much Does Pest Control Cost in Adelaide? 2025 Guide', excerpt: 'A transparent breakdown of what you can expect to pay for different pest control services in the Adelaide area.', date: '2025-03-01', category: 'Guides' },
+  { slug: 'cockroach-prevention-mistakes', title: 'Cockroach Prevention: 8 Things Adelaide Homeowners Get Wrong', excerpt: 'Think keeping a clean kitchen is enough? Here are the common mistakes that keep cockroaches coming back.', date: '2025-02-15', category: 'Prevention' },
 ];
 
 export default function BlogPage() {

@@ -13,7 +13,7 @@ export function TestimonialsSection() {
           <div className="text-center mb-16">
             <span className="label-overline block mb-3">Reviews</span>
             <h2 className="font-display font-extrabold text-h2 text-forest-900">
-              Trusted by Sydney Homeowners
+              Trusted by Adelaide Homeowners
             </h2>
           </div>
         </FadeUp>
