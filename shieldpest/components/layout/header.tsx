@@ -45,79 +45,92 @@ export function Header() {
     window.addEventListener('scroll', handler, { passive: true });
     // Trigger initial check on load
     handler();
-    return () => window.removeEventListener('scroll', handler);
-  }, []);
+
+    // Prevent scrolling when mobile menu is open
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handler);
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? `py-3 ${headerTheme === 'light'
-          ? 'bg-white/85 backdrop-blur-xl border-b border-forest-900/10 lg:bg-transparent lg:backdrop-blur-none lg:border-transparent'
-          : 'bg-forest-900/85 backdrop-blur-xl border-b border-white/10 lg:bg-transparent lg:backdrop-blur-none lg:border-transparent'
-        }`
-        : 'bg-transparent py-5 border-b border-transparent'
-        }`}
-    >
-      <div className="w-full px-6 md:px-10 lg:px-12 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex flex-col no-underline group relative z-50">
-          <span className={`font-display font-black text-2xl tracking-tight leading-none group-hover:text-amber-400 transition-colors ${headerTheme === 'light' ? 'text-forest-900 drop-shadow-sm' : 'text-white'}`}>
-            Mr Solutions
-          </span>
-          <span className="font-body font-semibold text-[0.65rem] text-amber-400 tracking-[0.2em] uppercase mt-0.5 pl-0.5">
-            Pest Control
-          </span>
-        </Link>
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? `py-3 ${mobileOpen ? 'bg-transparent border-transparent' : (headerTheme === 'light'
+            ? 'bg-white/85 backdrop-blur-xl border-b border-forest-900/10 lg:bg-transparent lg:backdrop-blur-none lg:border-transparent'
+            : 'bg-forest-900/85 backdrop-blur-xl border-b border-white/10 lg:bg-transparent lg:backdrop-blur-none lg:border-transparent'
+          )}`
+          : 'bg-transparent py-5 border-b border-transparent'
+          }`}
+      >
+        <div className="w-full px-6 md:px-10 lg:px-12 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" onClick={() => setMobileOpen(false)} className="flex flex-col no-underline group relative z-50">
+            <span className={`font-display font-black text-2xl tracking-tight leading-none group-hover:text-amber-400 transition-colors ${headerTheme === 'light' && !mobileOpen ? 'text-forest-900 drop-shadow-sm' : 'text-white'}`}>
+              Mr Solutions
+            </span>
+            <span className="font-body font-semibold text-[0.65rem] text-amber-400 tracking-[0.2em] uppercase mt-0.5 pl-0.5">
+              Pest Control
+            </span>
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 items-center gap-8 bg-black/60 backdrop-blur-2xl border border-white/10 shadow-[0_4px_24px_-1px_rgba(0,0,0,0.5),0_0_1px_1px_rgba(255,255,255,0.1)_inset] rounded-full px-8 py-3">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="font-body text-sm font-semibold text-white no-underline hover:text-amber-400 transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 items-center gap-8 bg-black/60 backdrop-blur-2xl border border-white/10 shadow-[0_4px_24px_-1px_rgba(0,0,0,0.5),0_0_1px_1px_rgba(255,255,255,0.1)_inset] rounded-full px-8 py-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-body text-sm font-semibold text-white no-underline hover:text-amber-400 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-        {/* CTA Group */}
-        <div className="flex items-center gap-4 relative z-50">
-          <div
-            className={`flex items-center gap-4 transition-all duration-300 ease-in-out ${isPastHero
-              ? 'opacity-0 scale-95 pointer-events-none translate-x-4 absolute right-16' // visually hides without collapsing violently
-              : 'opacity-100 scale-100 translate-x-0 static'
-              }`}
-          >
-            <a
-              href={`tel:${siteConfig.phoneTel}`}
-              className={`flex items-center gap-2 font-body text-sm font-semibold no-underline transition-colors ${headerTheme === 'light' && !mobileOpen ? 'text-forest-900 drop-shadow-sm' : 'text-white'}`}
+          {/* CTA Group */}
+          <div className="flex items-center gap-4 relative z-50">
+            <div
+              className={`flex items-center gap-4 transition-all duration-300 ease-in-out ${isPastHero
+                ? 'opacity-0 scale-95 pointer-events-none translate-x-4 absolute right-16' // visually hides without collapsing violently
+                : 'opacity-100 scale-100 translate-x-0 static'
+                }`}
             >
-              <Phone className="w-4 h-4 text-amber-400" />
-              <span className="hidden md:inline">{siteConfig.phone}</span>
-            </a>
-            <Link
-              href="/quote"
-              className="font-body text-[0.85rem] font-semibold tracking-wide text-white bg-amber-500 px-5 py-2.5 rounded-lg no-underline hover:bg-amber-600 transition-colors"
+              <a
+                href={`tel:${siteConfig.phoneTel}`}
+                className={`flex items-center gap-2 font-body text-sm font-semibold no-underline transition-colors ${headerTheme === 'light' && !mobileOpen ? 'text-forest-900 drop-shadow-sm' : 'text-white'}`}
+              >
+                <Phone className="w-4 h-4 text-amber-400" />
+                <span className="hidden md:inline">{siteConfig.phone}</span>
+              </a>
+              <Link
+                href="/quote"
+                className="font-body text-[0.85rem] font-semibold tracking-wide text-white bg-amber-500 px-5 py-2.5 rounded-lg no-underline hover:bg-amber-600 transition-colors"
+              >
+                Free Quote
+              </Link>
+            </div>
+
+            {/* Mobile menu toggle */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className={`lg:hidden p-2 rounded-xl transition-all duration-300 backdrop-blur-md border ${headerTheme === 'light' && !mobileOpen
+                ? 'bg-white/50 border-forest-900/10 text-forest-900 shadow-sm'
+                : 'bg-black/20 border-white/10 text-white'
+                }`}
+              aria-label="Toggle menu"
             >
-              Free Quote
-            </Link>
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
           </div>
-
-          {/* Mobile menu toggle */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden p-2 rounded-xl transition-all duration-300 backdrop-blur-md border ${headerTheme === 'light' && !mobileOpen
-              ? 'bg-white/50 border-forest-900/10 text-forest-900 shadow-sm'
-              : 'bg-black/20 border-white/10 text-white'
-              }`}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
         </div>
-      </div>
+      </header>
 
       {/* Mobile Nav Overlay */}
       <div
@@ -151,6 +164,6 @@ export function Header() {
           </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
