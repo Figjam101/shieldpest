@@ -134,7 +134,7 @@ export function Header() {
 
       {/* Mobile Nav Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-forest-900/40 backdrop-blur-2xl transition-all duration-500 lg:hidden flex flex-col justify-center items-center ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        className={`fixed inset-0 z-40 bg-forest-900/98 backdrop-blur-3xl transition-all duration-500 lg:hidden flex flex-col justify-center items-center ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
       >
         <nav className="flex flex-col items-center w-full px-8 gap-4 pt-16">
