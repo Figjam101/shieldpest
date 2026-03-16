@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail, Clock } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
 import { CTABanner } from '@/components/sections/cta-banner';
 
@@ -53,7 +54,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
-                  <MapPin className="w-5 h-5" />
+                  <Image src="/images/location-pin.png" alt="" width={96} height={96} className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-base text-forest-900 mb-1">Service Area</h3>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 import { locations } from '@/data/locations';
 import { CTABanner } from '@/components/sections/cta-banner';
 import { BreadcrumbSchema } from '@/components/seo/json-ld';
@@ -32,7 +33,7 @@ export default function LocationsPage() {
             {locations.map((region) => (
               <div key={region.slug}>
                 <h2 className="font-display font-bold text-h3 text-forest-900 mb-6 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-amber-500" />
+                  <Image src="/images/location-pin.png" alt="" width={96} height={96} className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain" />
                   {region.name}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
